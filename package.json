@@ -1,0 +1,12 @@
+{
+  "name": "wedding-vietnam",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page dam cuoi Viet Nam voi admin upload anh theo khoi.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=10"
+  }
+}

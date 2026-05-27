@@ -1,0 +1,85 @@
+{
+  "theme": "lotus",
+  "page": "editorial",
+  "galleryLayout": "grid",
+  "heroLayout": "full",
+  "storyLayout": "strip",
+  "ceremonyLayout": "card",
+  "content": {
+    "brideName": "Minh Anh",
+    "groomName": "Thiên Nam",
+    "date": "2026-12-12",
+    "time": "17:30",
+    "venueName": "Nhà hàng Riverside Palace",
+    "venueAddress": "360D Bến Vân Đồn, Quận 4, TP. Hồ Chí Minh",
+    "brideFamilyName": "Tư gia nhà gái",
+    "brideFamilyAddress": "Quận 3, TP. Hồ Chí Minh",
+    "groomFamilyName": "Tư gia nhà trai",
+    "groomFamilyAddress": "Quận 7, TP. Hồ Chí Minh",
+    "invitation": "Trân trọng kính mời gia đình và bạn bè đến chung vui cùng chúng mình trong ngày thành hôn.",
+    "storyTitle": "Từ một lời chào bình dị",
+    "storyText": "Chúng mình gặp nhau trong một chiều mưa nhẹ, đi qua nhiều mùa nắng gió và chọn cùng nhau bắt đầu một gia đình nhỏ.",
+    "ceremonyTitle": "Lễ thành hôn",
+    "ceremonyNote": "Tiệc cưới được chuẩn bị thân mật, ấm cúng và bắt đầu đón khách từ 17:00."
+  },
+  "images": {
+    "hero": [
+      {
+        "url": "/assets/default-hero.jpg",
+        "alt": "Cô dâu chú rể trong ngày cưới",
+        "source": "sample",
+        "name": "",
+        "uploadedAt": ""
+      }
+    ],
+    "story": [
+      {
+        "url": "/assets/default-story.jpg",
+        "alt": "Khoảnh khắc chụp ảnh cưới",
+        "source": "sample",
+        "name": "",
+        "uploadedAt": ""
+      }
+    ],
+    "ceremony": [
+      {
+        "url": "/assets/default-ceremony.jpg",
+        "alt": "Không gian tiệc cưới",
+        "source": "sample",
+        "name": "",
+        "uploadedAt": ""
+      }
+    ],
+    "gallery": [
+      {
+        "url": "/assets/default-gallery-1.jpg",
+        "alt": "Bàn tiệc cưới",
+        "source": "sample",
+        "name": "",
+        "uploadedAt": ""
+      },
+      {
+        "url": "/assets/default-gallery-2.jpg",
+        "alt": "Hoa cưới",
+        "source": "sample",
+        "name": "",
+        "uploadedAt": ""
+      },
+      {
+        "url": "/assets/default-gallery-3.jpg",
+        "alt": "Nhẫn cưới",
+        "source": "sample",
+        "name": "",
+        "uploadedAt": ""
+      },
+      {
+        "url": "/assets/default-gallery-4.jpg",
+        "alt": "Khoảnh khắc cô dâu chú rể",
+        "source": "sample",
+        "name": "",
+        "uploadedAt": ""
+      }
+    ]
+  },
+  "updatedAt": "2026-05-26T02:41:46.919Z"
+}

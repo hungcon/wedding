@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin thiệp cưới</title>
+    <meta name="description" content="Trang quản trị landing page đám cưới">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Lora:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;500;600;700&amp;family=Noto+Serif+Display:wght@500;600;700&amp;family=Nunito+Sans:wght@400;600;700;800&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=20260527-1">
+  </head>
+  <body class="admin-page" data-theme="ivory">
+    <header class="admin-header">
+      <a class="admin-brand" href="/" target="_blank" rel="noreferrer">
+        <span>Thiệp cưới</span>
+        <strong>Admin</strong>
+      </a>
+      <div class="admin-actions">
+        <span class="save-status" id="save-status">Đang tải</span>
+        <a class="button button-secondary" href="/" target="_blank" rel="noreferrer">Xem landing</a>
+        <button class="button button-primary" id="save-config" type="button">Áp dụng thay đổi</button>
+      </div>
+    </header>
+
+    <main class="admin-layout">
+      <section class="admin-panel content-panel" aria-labelledby="content-title">
+        <div class="panel-heading">
+          <p class="eyebrow">Nội dung</p>
+          <h1 id="content-title">Thông tin lễ cưới</h1>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            <span>Tên cô dâu</span>
+            <input type="text" data-content="brideName">
+          </label>
+          <label>
+            <span>Tên chú rể</span>
+            <input type="text" data-content="groomName">
+          </label>
+          <label>
+            <span>Ngày cưới</span>
+            <input type="date" data-content="date">
+          </label>
+          <label>
+            <span>Giờ đón khách</span>
+            <input type="time" data-content="time">
+          </label>
+          <label class="span-2">
+            <span>Địa điểm</span>
+            <input type="text" data-content="venueName">
+          </label>
+          <label class="span-2">
+            <span>Địa chỉ</span>
+            <input type="text" data-content="venueAddress">
+          </label>
+          <label>
+            <span>Tên khu vực nhà gái</span>
+            <input type="text" data-content="brideFamilyName">
+          </label>
+          <label>
+            <span>Tên khu vực nhà trai</span>
+            <input type="text" data-content="groomFamilyName">
+          </label>
+          <label class="span-2">
+            <span>Địa chỉ nhà gái trên Google Map</span>
+            <input type="text" data-content="brideFamilyAddress">
+          </label>
+          <label class="span-2">
+            <span>Địa chỉ nhà trai trên Google Map</span>
+            <input type="text" data-content="groomFamilyAddress">
+          </label>
+          <label class="span-2">
+            <span>Lời mời</span>
+            <textarea rows="3" data-content="invitation"></textarea>
+          </label>
+          <label class="span-2">
+            <span>Tiêu đề câu chuyện</span>
+            <input type="text" data-content="storyTitle">
+          </label>
+          <label class="span-2">
+            <span>Câu chuyện</span>
+            <textarea rows="4" data-content="storyText"></textarea>
+          </label>
+          <label>
+            <span>Tiêu đề lễ cưới</span>
+            <input type="text" data-content="ceremonyTitle">
+          </label>
+          <label>
+            <span>Ghi chú lễ cưới</span>
+            <input type="text" data-content="ceremonyNote">
+          </label>
+        </div>
+      </section>
+
+      <aside class="admin-panel settings-panel" aria-labelledby="settings-title">
+        <div class="panel-heading">
+          <p class="eyebrow">Giao diện</p>
+          <h2 id="settings-title">Theme và bố cục</h2>
+        </div>
+
+        <div class="control-stack">
+          <label>
+            <span>Theme</span>
+            <select data-config="theme">
+              <option value="ivory">Ivory - trang nhã</option>
+              <option value="sage">Sage - xanh dịu</option>
+              <option value="lotus">Lotus - hồng nhạt</option>
+            </select>
+          </label>
+          <label>
+            <span>Kiểu trang</span>
+            <select data-config="page">
+              <option value="classic">Classic</option>
+              <option value="editorial">Editorial</option>
+              <option value="minimal">Minimal</option>
+            </select>
+          </label>
+          <label>
+            <span>Hero</span>
+            <select data-config="heroLayout">
+              <option value="full">Ảnh nền lớn</option>
+              <option value="split">Chữ lệch trái</option>
+            </select>
+          </label>
+          <label>
+            <span>Câu chuyện</span>
+            <select data-config="storyLayout">
+              <option value="duo">Hai ảnh dọc</option>
+              <option value="strip">Dải ảnh ngang</option>
+            </select>
+          </label>
+          <label>
+            <span>Lễ cưới</span>
+            <select data-config="ceremonyLayout">
+              <option value="card">Thẻ thông tin</option>
+              <option value="wide">Ảnh rộng</option>
+            </select>
+          </label>
+          <label>
+            <span>Thư viện ảnh</span>
+            <select data-config="galleryLayout">
+              <option value="editorial">Editorial</option>
+              <option value="grid">Lưới đều</option>
+              <option value="masonry">Masonry</option>
+            </select>
+          </label>
+        </div>
+      </aside>
+
+      <section class="admin-panel uploads-panel" aria-labelledby="uploads-title">
+        <div class="panel-heading">
+          <p class="eyebrow">Ảnh theo khối</p>
+          <h2 id="uploads-title">Tải ảnh vào đúng phần landing</h2>
+        </div>
+        <div class="upload-grid" id="upload-blocks"></div>
+      </section>
+
+      <section class="admin-panel wishes-admin-panel" aria-labelledby="wishes-title">
+        <div class="panel-heading">
+          <p class="eyebrow">Lời chúc</p>
+          <h2 id="wishes-title">Lời chúc khách gửi</h2>
+        </div>
+        <div class="admin-wish-list" id="admin-wish-list"></div>
+      </section>
+    </main>
+
+    <script src="/shared.js?v=20260527-1"></script>
+    <script src="/admin.js?v=20260527-1"></script>
+  </body>
+</html>
