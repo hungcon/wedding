@@ -3,170 +3,147 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin thiệp cưới</title>
-    <meta name="description" content="Trang quản trị landing page đám cưới">
+    <meta name="theme-color" content="#faf7f2">
+    <title>Wedding Studio · Quản lý thiệp cưới</title>
+    <meta name="description" content="Chăm chút nội dung, hình ảnh và phong cách cho tấm thiệp cưới của bạn.">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Lora:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;500;600;700&amp;family=Noto+Serif+Display:wght@500;600;700&amp;family=Nunito+Sans:wght@400;600;700;800&amp;display=swap&amp;subset=vietnamese" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css?v=20260527-1">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Lora:ital,wght@0,400;0,500;1,400&amp;family=Noto+Serif+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=20261012-1">
+    <link rel="stylesheet" href="/admin.css?v=20261012-2">
   </head>
   <body class="admin-page" data-theme="ivory">
+    <a class="admin-skip-link" href="#content">Đến phần chỉnh sửa</a>
     <header class="admin-header">
-      <a class="admin-brand" href="/" target="_blank" rel="noreferrer">
-        <span>Thiệp cưới</span>
-        <strong>Admin</strong>
+      <a class="admin-brand" href="/admin.html" aria-label="Wedding Studio — quản lý thiệp cưới">
+        <span class="admin-brand-mark" aria-hidden="true">w.</span>
+        <span class="admin-brand-copy"><strong>Wedding Studio</strong><span>CHĂM CHÚT NGÀY CHUNG ĐÔI</span></span>
       </a>
       <div class="admin-actions">
-        <span class="save-status" id="save-status">Đang tải</span>
-        <a class="button button-secondary" href="/" target="_blank" rel="noreferrer">Xem landing</a>
-        <button class="button button-primary" id="save-config" type="button">Áp dụng thay đổi</button>
+        <span class="save-status" id="save-status" role="status" aria-live="polite" aria-atomic="true" data-state="muted">Đang tải…</span>
+        <a class="button button-secondary" href="/" target="_blank" rel="noopener noreferrer">Xem thiệp <span aria-hidden="true">↗</span><span class="admin-sr-only"> (mở trong tab mới)</span></a>
+        <button class="button button-primary" id="save-config" type="button" disabled><span aria-hidden="true">✓</span> Lưu thay đổi</button>
       </div>
     </header>
 
-    <main class="admin-layout">
-      <section class="admin-panel content-panel" aria-labelledby="content-title">
-        <div class="panel-heading">
-          <p class="eyebrow">Nội dung</p>
-          <h1 id="content-title">Thông tin lễ cưới</h1>
+    <main class="admin-main">
+      <section class="admin-intro" aria-labelledby="admin-title">
+        <div class="admin-intro-copy">
+          <p class="eyebrow">Không gian của hai bạn</p>
+          <h1 id="admin-title">Một tấm thiệp<br>thật <em>riêng.</em></h1>
+          <p>Những lời thương, những khoảnh khắc đẹp.<br>Chăm chút từng chi tiết cho ngày chung đôi.</p>
         </div>
-
-        <div class="form-grid">
-          <label>
-            <span>Tên cô dâu</span>
-            <input type="text" data-content="brideName">
-          </label>
-          <label>
-            <span>Tên chú rể</span>
-            <input type="text" data-content="groomName">
-          </label>
-          <label>
-            <span>Ngày cưới</span>
-            <input type="date" data-content="date">
-          </label>
-          <label>
-            <span>Giờ đón khách</span>
-            <input type="time" data-content="time">
-          </label>
-          <label class="span-2">
-            <span>Địa điểm</span>
-            <input type="text" data-content="venueName">
-          </label>
-          <label class="span-2">
-            <span>Địa chỉ</span>
-            <input type="text" data-content="venueAddress">
-          </label>
-          <label>
-            <span>Tên khu vực nhà gái</span>
-            <input type="text" data-content="brideFamilyName">
-          </label>
-          <label>
-            <span>Tên khu vực nhà trai</span>
-            <input type="text" data-content="groomFamilyName">
-          </label>
-          <label class="span-2">
-            <span>Địa chỉ nhà gái trên Google Map</span>
-            <input type="text" data-content="brideFamilyAddress">
-          </label>
-          <label class="span-2">
-            <span>Địa chỉ nhà trai trên Google Map</span>
-            <input type="text" data-content="groomFamilyAddress">
-          </label>
-          <label class="span-2">
-            <span>Lời mời</span>
-            <textarea rows="3" data-content="invitation"></textarea>
-          </label>
-          <label class="span-2">
-            <span>Tiêu đề câu chuyện</span>
-            <input type="text" data-content="storyTitle">
-          </label>
-          <label class="span-2">
-            <span>Câu chuyện</span>
-            <textarea rows="4" data-content="storyText"></textarea>
-          </label>
-          <label>
-            <span>Tiêu đề lễ cưới</span>
-            <input type="text" data-content="ceremonyTitle">
-          </label>
-          <label>
-            <span>Ghi chú lễ cưới</span>
-            <input type="text" data-content="ceremonyNote">
-          </label>
+        <div class="admin-preview-card">
+          <span class="admin-preview-ornament" aria-hidden="true">✧</span>
+          <p class="admin-preview-label">THIỆP CƯỚI CỦA BẠN</p>
+          <h2 id="admin-preview-couple">Ngày chung đôi</h2>
+          <p class="admin-preview-date" id="admin-preview-date">Cùng viết nên một khởi đầu đẹp</p>
+          <a href="/" target="_blank" rel="noopener noreferrer">Mở tấm thiệp <span aria-hidden="true">↗</span><span class="admin-sr-only"> (mở trong tab mới)</span></a>
         </div>
       </section>
 
-      <aside class="admin-panel settings-panel" aria-labelledby="settings-title">
-        <div class="panel-heading">
-          <p class="eyebrow">Giao diện</p>
-          <h2 id="settings-title">Theme và bố cục</h2>
+      <nav class="admin-section-nav" aria-label="Các phần quản lý thiệp">
+        <a href="#content"><span class="admin-nav-index" aria-hidden="true">01</span> Nội dung</a>
+        <a href="#settings"><span class="admin-nav-index" aria-hidden="true">02</span> Phong cách</a>
+        <a href="#uploads"><span class="admin-nav-index" aria-hidden="true">03</span> Hình ảnh <span class="admin-nav-count" id="admin-image-count">—</span></a>
+        <a href="#wishes"><span class="admin-nav-index" aria-hidden="true">04</span> Lời chúc <span class="admin-nav-count" id="admin-wish-count">—</span></a>
+      </nav>
+
+      <div class="admin-layout">
+        <section class="admin-panel content-panel" id="content" aria-labelledby="content-title">
+          <div class="panel-heading">
+            <p class="eyebrow">01 / Nội dung tấm thiệp</p>
+            <h2 id="content-title">Kể câu chuyện của hai bạn</h2>
+            <p>Từ lời mời chân thành đến nơi mình gặp nhau.</p>
+          </div>
+
+          <fieldset class="admin-field-group">
+            <legend>Đôi uyên ương</legend>
+            <div class="form-grid">
+              <label><span>Tên cô dâu</span><input type="text" data-content="brideName" placeholder="Tên cô dâu"></label>
+              <label><span>Tên chú rể</span><input type="text" data-content="groomName" placeholder="Tên chú rể"></label>
+              <label class="span-2"><span>Lời mời</span><textarea rows="3" data-content="invitation" placeholder="Một lời mời dành cho những người thân yêu…"></textarea></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="admin-field-group">
+            <legend>Ngày vui &amp; địa điểm</legend>
+            <div class="form-grid">
+              <label><span>Ngày cưới</span><input type="date" data-content="date"></label>
+              <label><span>Giờ đón khách</span><input type="time" data-content="time"></label>
+              <label class="span-2"><span>Tên địa điểm</span><input type="text" data-content="venueName" placeholder="Nhà hàng, khách sạn hoặc tư gia"></label>
+              <label class="span-2"><span>Địa chỉ</span><input type="text" data-content="venueAddress" placeholder="Địa chỉ đầy đủ để khách dễ tìm đến"></label>
+              <label><span>Tiêu đề lễ cưới</span><input type="text" data-content="ceremonyTitle" placeholder="Lễ thành hôn"></label>
+              <label><span>Ghi chú lễ cưới</span><input type="text" data-content="ceremonyNote" placeholder="Một lời nhắn dành cho khách"></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="admin-field-group">
+            <legend>Hai bên gia đình</legend>
+            <div class="form-grid">
+              <label><span>Tên khu vực nhà gái</span><input type="text" data-content="brideFamilyName" placeholder="Nhà gái"></label>
+              <label><span>Tên khu vực nhà trai</span><input type="text" data-content="groomFamilyName" placeholder="Nhà trai"></label>
+              <label class="span-2"><span>Địa chỉ nhà gái trên Google Maps</span><input type="text" data-content="brideFamilyAddress" placeholder="Địa chỉ để hiển thị trên bản đồ"></label>
+              <label class="span-2"><span>Địa chỉ nhà trai trên Google Maps</span><input type="text" data-content="groomFamilyAddress" placeholder="Địa chỉ để hiển thị trên bản đồ"></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="admin-field-group">
+            <legend>Câu chuyện tình yêu</legend>
+            <div class="form-grid">
+              <label class="span-2"><span>Tiêu đề câu chuyện</span><input type="text" data-content="storyTitle" placeholder="Từ lần đầu gặp gỡ…"></label>
+              <label class="span-2"><span>Câu chuyện của hai bạn</span><textarea rows="5" data-content="storyText" placeholder="Viết lại những kỷ niệm đưa hai bạn đến ngày hôm nay…"></textarea></label>
+            </div>
+          </fieldset>
+          <p class="admin-panel-note"><span aria-hidden="true">✧</span> Nhấn “Lưu thay đổi” để cập nhật nội dung trên tấm thiệp.</p>
+        </section>
+
+        <div class="admin-settings-column">
+          <aside class="admin-panel settings-panel" id="settings" aria-labelledby="settings-title">
+            <div class="panel-heading">
+              <p class="eyebrow">02 / Phong cách</p>
+              <h2 id="settings-title">Một chút gu riêng</h2>
+              <p>Chọn sắc màu và cách kể chuyện.</p>
+            </div>
+            <div class="control-stack">
+              <label><span>Bảng màu</span><select data-config="theme"><option value="ivory">Ivory · Trang nhã</option><option value="sage">Sage · Xanh dịu</option><option value="lotus">Lotus · Hồng nhạt</option></select></label>
+              <div class="admin-theme-swatches" aria-hidden="true"><i class="swatch-ivory"></i><i class="swatch-sage"></i><i class="swatch-lotus"></i><span>Nhẹ nhàng &amp; tinh tế</span></div>
+              <label><span>Phong cách tổng thể</span><select data-config="page"><option value="classic">Classic · Thanh lịch</option><option value="editorial">Editorial · Tạp chí</option><option value="minimal">Minimal · Tối giản</option></select></label>
+              <div class="admin-control-divider"></div>
+              <p class="admin-control-label">BỐ CỤC TỪNG PHẦN</p>
+              <label><span>Ảnh mở đầu</span><select data-config="heroLayout"><option value="full">Ảnh nền lớn</option><option value="split">Chữ lệch trái</option></select></label>
+              <label><span>Câu chuyện</span><select data-config="storyLayout"><option value="duo">Hai ảnh dọc</option><option value="strip">Dải ảnh ngang</option></select></label>
+              <label><span>Lễ cưới</span><select data-config="ceremonyLayout"><option value="card">Thẻ thông tin</option><option value="wide">Ảnh rộng</option></select></label>
+              <label><span>Thư viện ảnh</span><select data-config="galleryLayout"><option value="editorial">Editorial · Tạp chí</option><option value="grid">Lưới đều</option><option value="masonry">Masonry · So le</option></select></label>
+            </div>
+            <a class="admin-preview-link" href="/" target="_blank" rel="noopener noreferrer">Xem thiệp của hai bạn <span aria-hidden="true">↗</span><span class="admin-sr-only"> (mở trong tab mới)</span></a>
+          </aside>
         </div>
 
-        <div class="control-stack">
-          <label>
-            <span>Theme</span>
-            <select data-config="theme">
-              <option value="ivory">Ivory - trang nhã</option>
-              <option value="sage">Sage - xanh dịu</option>
-              <option value="lotus">Lotus - hồng nhạt</option>
-            </select>
-          </label>
-          <label>
-            <span>Kiểu trang</span>
-            <select data-config="page">
-              <option value="classic">Classic</option>
-              <option value="editorial">Editorial</option>
-              <option value="minimal">Minimal</option>
-            </select>
-          </label>
-          <label>
-            <span>Hero</span>
-            <select data-config="heroLayout">
-              <option value="full">Ảnh nền lớn</option>
-              <option value="split">Chữ lệch trái</option>
-            </select>
-          </label>
-          <label>
-            <span>Câu chuyện</span>
-            <select data-config="storyLayout">
-              <option value="duo">Hai ảnh dọc</option>
-              <option value="strip">Dải ảnh ngang</option>
-            </select>
-          </label>
-          <label>
-            <span>Lễ cưới</span>
-            <select data-config="ceremonyLayout">
-              <option value="card">Thẻ thông tin</option>
-              <option value="wide">Ảnh rộng</option>
-            </select>
-          </label>
-          <label>
-            <span>Thư viện ảnh</span>
-            <select data-config="galleryLayout">
-              <option value="editorial">Editorial</option>
-              <option value="grid">Lưới đều</option>
-              <option value="masonry">Masonry</option>
-            </select>
-          </label>
-        </div>
-      </aside>
+        <section class="admin-panel uploads-panel" id="uploads" aria-labelledby="uploads-title">
+          <div class="panel-heading">
+            <p class="eyebrow">03 / Những khoảnh khắc</p>
+            <h2 id="uploads-title">Mỗi bức ảnh, một kỷ niệm</h2>
+            <p>Thêm ảnh vào từng phần của tấm thiệp. Bạn có thể chọn nhiều ảnh cùng lúc.</p>
+          </div>
+          <div class="upload-grid" id="upload-blocks" aria-busy="true"><p class="admin-loading">Đang chuẩn bị thư viện ảnh…</p></div>
+        </section>
 
-      <section class="admin-panel uploads-panel" aria-labelledby="uploads-title">
-        <div class="panel-heading">
-          <p class="eyebrow">Ảnh theo khối</p>
-          <h2 id="uploads-title">Tải ảnh vào đúng phần landing</h2>
-        </div>
-        <div class="upload-grid" id="upload-blocks"></div>
-      </section>
+        <section class="admin-panel wishes-admin-panel" id="wishes" aria-labelledby="wishes-title">
+          <div class="panel-heading">
+            <p class="eyebrow">04 / Yêu thương được gửi đến</p>
+            <h2 id="wishes-title">Những lời chúc thân thương</h2>
+            <p>Lưu giữ lời chúc từ những người cùng chia sẻ ngày vui.</p>
+          </div>
+          <div class="admin-wish-list" id="admin-wish-list" aria-busy="true"><p class="admin-loading">Đang tải những lời chúc…</p></div>
+        </section>
+      </div>
 
-      <section class="admin-panel wishes-admin-panel" aria-labelledby="wishes-title">
-        <div class="panel-heading">
-          <p class="eyebrow">Lời chúc</p>
-          <h2 id="wishes-title">Lời chúc khách gửi</h2>
-        </div>
-        <div class="admin-wish-list" id="admin-wish-list"></div>
-      </section>
+      <footer class="admin-footer"><span>Wedding Studio</span><p>Một ngày để nhớ. Một đời để thương.</p><a href="#admin-title">Về đầu trang <span aria-hidden="true">↑</span></a></footer>
     </main>
 
-    <script src="/shared.js?v=20260527-1"></script>
-    <script src="/admin.js?v=20260527-1"></script>
+    <script src="/shared.js?v=20261012-1"></script>
+    <script src="/admin.js?v=20261012-1"></script>
   </body>
 </html>

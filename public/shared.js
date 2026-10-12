@@ -137,7 +137,8 @@
       return null;
     }
     var time = timeValue || '00:00';
-    var date = new Date(dateValue + 'T' + time + ':00');
+    // The ceremony takes place in Vietnam, including for guests viewing abroad.
+    var date = new Date(dateValue + 'T' + time + ':00+07:00');
     return isNaN(date.getTime()) ? null : date;
   }
 
