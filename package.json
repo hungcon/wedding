@@ -4,7 +4,8 @@
   "private": true,
   "description": "Landing page dam cuoi Viet Nam voi admin upload anh theo khoi.",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "bash cloudflare/deploy.sh"
   },
   "engines": {
     "node": ">=10"
