@@ -11,5 +11,5 @@
     "bindings": [{ "name": "WEDDING_DATA", "class_name": "WeddingData" }]
   },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["WeddingData"] }],
-  "r2_buckets": [{ "binding": "WEDDING_UPLOADS" }]
+  "r2_buckets": [{ "binding": "WEDDING_UPLOADS", "bucket_name": "wedding-wedding-uploads" }]
 }

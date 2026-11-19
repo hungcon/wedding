@@ -13,7 +13,7 @@ npm start
 
 ## Deploy lên Cloudflare Workers từ GitHub
 
-1. Bật R2 tại **Storage & databases → R2 → Overview**. Wrangler tự tạo bucket cho binding `WEDDING_UPLOADS` khi deploy. [Tài liệu R2](https://developers.cloudflare.com/r2/get-started/)
+1. Mở **Storage & databases → R2 → Overview** và kiểm tra bucket `wedding-wedding-uploads`. Nếu bucket chưa có, tạo bucket đúng tên này. Wrangler dùng `bucket_name` trong `wrangler.jsonc` để gắn trực tiếp bucket vào binding `WEDDING_UPLOADS`. [Tài liệu R2](https://developers.cloudflare.com/r2/get-started/workers-api/)
 2. Mở Worker `wedding` → **Settings → Build**. Chọn nhánh production đang dùng, để **Root directory** trống nếu `wrangler.jsonc` nằm ở gốc repo GitHub, và để **Build command** trống. Đặt **Deploy command** thành `npx --yes wrangler@4.165.0 deploy`. [Tài liệu Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/)
 3. Push các thay đổi lên nhánh production để chạy build. Trong **Settings → Variables and Secrets**, tạo secret `ADMIN_PASSWORD` và chọn **Deploy**. Sau đó vào `/admin` và đăng nhập với tài khoản `admin` cùng mật khẩu vừa đặt. Khách vẫn có thể xem thiệp và gửi lời chúc khi chưa cấu hình secret. [Tài liệu Workers secrets](https://developers.cloudflare.com/workers/configuration/secrets/)
 4. Kiểm tra `/api/config` và `/api/wishes` đều trả `200` cùng JSON, sau đó mở trang chủ.
